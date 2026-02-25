@@ -9,3 +9,9 @@ node_modules/
 cloudinary_python.txt
 kaggle.json
 .venv/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+outputs/*
+!outputs/.gitkeep
