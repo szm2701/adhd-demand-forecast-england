@@ -58,18 +58,39 @@ def apply_chart_layout(fig, title: str = None):
 
 
 
-# HEADER + SUBTITLE BANNER (stakeholder-friendly)
+
+# DASHBOARD HEADER SECTION
 
 
+# Main dashboard title displayed at the top of the application.
+# Clearly communicates the subject, geographic scope, and timeframe of the analysis presented in the dashboard.
 st.title("ADHD Assessment Demand & Service Strain (England, 2019–2024)")
 
-# Subtitle banner (requested): helps assessors and stakeholders immediately understand purpose
+
+# Informational banner describing the purpose of the dashboard.
+# This provides context for stakeholders before they explore the interactive visualisations.
 st.info(
     "This dashboard summarises ADHD referral demand trends and service strain indicators in England (2019–2024), "
     "and presents an interpretable forecasting model to support service planning and capacity management."
 )
 
-st.caption("Data source: NHS England MHSDS ADHD statistics (processed in analysis notebook).")
+
+# Divider used to visually separate the dashboard header from the interactive analytical content below.
+# This improves layout clarity and readability.
+st.divider()
+
+
+# Instruction caption guiding users on how to interact with the dashboard.
+# This improves usability for non-technical stakeholders.
+st.caption(
+    "Interactive analytical dashboard — use the sidebar to explore referral demand, age-group patterns, service strain, and forecasting outputs."
+)
+
+
+# Data source badge highlighting the origin of the dataset.
+# Displaying the data source improves transparency and aligns with good data communication practice.
+# Data source label (badge-like fallback for older Streamlit versions)
+st.caption("📊 Data source: NHS England MHSDS")
 
 
 
@@ -415,7 +436,7 @@ elif page == "Service Strain":
         st.markdown("### Interpretation")
         st.markdown(
             "- This metric indicates **long-wait pressure** (waiting over one year).\n"
-            "- Theregression test for trend was **not statistically significant** (p = 0.561), suggesting no clear linear increase in the long-wait share across the period.\n"
+            "- The regression test for trend was **not statistically significant** (p = 0.561), suggesting no clear linear increase in the long-wait share across the period.\n"
             "- Even without a significant trend, **high absolute levels** can still indicate operational risk and patient impact."
         )
 
