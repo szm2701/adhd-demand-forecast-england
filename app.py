@@ -27,7 +27,7 @@ st.set_page_config(
 
 
 # Tweak 1: Reduce top whitespace + soften KPI styling.
-# Note: This is purely presentation. It does not affect analysis results.
+# Note: This is for presentation.
 st.markdown(
     """
     <style>
@@ -42,7 +42,7 @@ st.markdown(
 )
 
 # Tweak 2: Use a clean Plotly template for consistent chart styling
-# (No hard-coded colours; it just improves grid/axes readability)
+# (No hard-coded colours; improves grid/axes readability)
 PLOTLY_TEMPLATE = "plotly_white"
 
 # Tweak 3: Make charts easier to read by default (hover aligned by x)
@@ -460,7 +460,7 @@ elif page == "Forecast":
         "This page compares observed referrals to model predictions in the test period."
     )
 
-    # Forecast evaluation metrics from your analysis notebook (user-provided)
+    # Forecast evaluation metrics analysis notebook 
     # MAE = Mean Absolute Error
     # RMSE = Root Mean Squared Error
     # MAPE = Mean Absolute Percentage Error
@@ -499,7 +499,7 @@ elif page == "Forecast":
         fig = apply_chart_layout(fig, title="Actual vs predicted monthly referrals")
         st.plotly_chart(fig, use_container_width=True)
 
-        # Interpretation uses your exact MAPE value (rounded for readability)
+        # Interpretation uses exact MAPE value (rounded for readability)
         st.markdown("### Interpretation")
         st.markdown(
             "- The model captures the **overall direction of change**, but may **underestimate** demand in later months.\n"
