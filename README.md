@@ -334,7 +334,6 @@ adhd-demand-forecast-england/
 ```
 
 
-
 ## Key Project Outputs
 
 The main outputs of the project include:
@@ -361,11 +360,19 @@ Data Analytics Capstone Project 2 - March 2026
 
 ## References
 
-NHS Digital (2025) *Mental Health Services Monthly Statistics – ADHD Waiting Times and Referrals.*
+NHS Digital (2025) *Mental Health Services Monthly Statistics – ADHD Waiting Times and Referrals.*  
+Available at: https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics  
+(Accessed: 25 February 2026).
 
-NICE (2018) *Attention Deficit Hyperactivity Disorder: Diagnosis and Management.*
+NHS England (2024) *ADHD services and policy updates.*  
+Available at: https://www.england.nhs.uk/mental-health/adhd/  
+(Accessed: 25 February 2026).
 
-NHS England (2024) *Independent ADHD Taskforce Report.*
+NICE (2018) *Attention deficit hyperactivity disorder: diagnosis and management (NG87).*  
+Available at: https://www.nice.org.uk/guidance/ng87  
+(Accessed: 25 February 2026).
 
-UK Parliament Commons Library (2025) *ADHD in the UK: Prevalence and Services.*
+UK Parliament House of Commons Library (2026) *FAQ: ADHD statistics (England).*  
+Available at: https://commonslibrary.parliament.uk/research-briefings/cbp-10551/  
+(Accessed: 25 February 2026).
 
