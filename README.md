@@ -18,7 +18,7 @@ This project applies statistical analysis and forecasting techniques to NHS ADHD
 - [Hypothesis Validation](#hypothesis-validation)
 - [Development Roadmap](#development-roadmap)
 - [Tools & Technologies](#tools--technologies)
-- [Use of Generative Artificial Intelligence](#use-of-generative-artificial-intelligence-genai-in-this-project)
+- [Use of Generative Artificial Intelligence (GenAI)](#use-of-generative-artificial-intelligence-genai)
 - [How to Run the Project](#how-to-run-the-project)
 - [Dashboard](#dashboard)
 - [Ethical Considerations](#ethical-considerations)
@@ -203,19 +203,25 @@ GenAI (Microsoft Copilot) was used to support the workflow:
 
 ## How to Run the Project
 
-1. Clone the repository: 
+1. Clone the repository:
 
+```
 git clone <repo-url>
+```
 
 2. Navigate to the project folder.
 
 3. Install dependencies:
 
- pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 4. Run the Streamlit dashboard:
 
- streamlit run app.py
+```
+streamlit run app.py
+```
 
 The analysis notebook can be found in: jupyter_notebooks/adhd_demand_analysis_and_forecasting.ipynb
 
@@ -300,30 +306,33 @@ Overall, the project strengthened practical skills in data cleaning, statistical
 
 ## Project Structure
 
+```
 adhd-demand-forecast-england/
 │
 ├── data
-│ ├── raw
-│ │ └── MHSDS_historic.csv
-│ └── processed
-│ ├── referrals_timeseries.csv
-│ ├── age_group_referrals.csv
-│ ├── service_strain.csv
-│ └── forecast_results.csv
+│   ├── raw
+│   │   └── MHSDS_historic.csv
+│   └── processed
+│       ├── referrals_timeseries.csv
+│       ├── age_group_referrals.csv
+│       ├── service_strain.csv
+│       └── forecast_results.csv
 │
 ├── images
-│ ├── dashboard_overview.png
-│ ├── dashboard_age_analysis.png
-│ ├── dashboard_service_strain.png
-│ ├── dashboard_forecast.png
-│ └── dashboard_wireframe.drawio.png
+│   ├── dashboard_overview.png
+│   ├── dashboard_age_analysis.png
+│   ├── dashboard_service_strain.png
+│   ├── dashboard_forecast.png
+│   └── dashboard_wireframe.drawio.png
 │
 ├── jupyter_notebooks
-│ └── adhd_demand_analysis_and_forecasting.ipynb
+│   └── adhd_demand_analysis_and_forecasting.ipynb
 │
 ├── app.py
 ├── requirements.txt
 └── README.md
+```
+
 
 
 ## Key Project Outputs
