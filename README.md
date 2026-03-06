@@ -16,6 +16,7 @@ This project applies statistical analysis and forecasting techniques to NHS ADHD
 - [Dataset](#dataset)
 - [Business Requirements](#business-requirements)
 - [Hypothesis Validation](#hypothesis-validation)
+- [Development Roadmap](#development-roadmap)
 - [Tools & Technologies](#tools--technologies)
 - [Use of Generative Artificial Intelligence](#use-of-generative-artificial-intelligence-genai-in-this-project)
 - [How to Run the Project](#how-to-run-the-project)
@@ -143,6 +144,27 @@ There is a statistically significant relationship between reporting month and th
 Test used: Linear regression
 
 Result: **Reject H0 (p < 0.001)**
+
+
+## Development Roadmap
+
+Project development was organised using a GitHub Project Board following a Kanban-style workflow. Tasks were structured into stages including **To Do**, **In Progress**, and **Done**, allowing progress to be tracked throughout the project lifecycle.
+
+The board was used to manage key project tasks including:
+
+- Data preparation and cleaning
+- Statistical analysis and hypothesis testing
+- Forecast model development
+- Dashboard implementation
+- Documentation and reporting
+
+### Project Board
+
+![Project Board](images/project_board.png)
+
+You can also view the live project board here:
+
+[GitHub Project Board](https://github.com/users/szm2701/projects/2/views/1)
 
 
 ## Tools & Technologies
