@@ -1,72 +1,292 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Template Instructions
 
-Welcome,
+# Analysis and Forecasting of ADHD Assessment Demand and Service Strain in England (2019–2024)
 
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+![Dashboard Overview](images/dashboard_overview.png)
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
 
-## How to use this repo
+## Project Overview
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+This project analyses national ADHD referral data from NHS England to examine trends in assessment demand, evaluate indicators of service strain, and develop an interpretable forecasting model for future referral volumes.
 
-1. Copy the URL of your repository to your clipboard.
+Statistical hypothesis testing and regression modelling are used to determine whether referral demand has increased significantly over time, whether referral levels differ across age groups, and whether long-wait referral proportions indicate increasing pressure on services.
 
-1. In VS Code, select **File** -> **Open Folder**.
+An interactive Streamlit dashboard was developed to communicate the analytical findings through stakeholder-focused visualisations.
 
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
 
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open the terminal.
+## Objectives
 
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
+The primary objective of this project is to analyse ADHD referral demand trends in England and evaluate indicators of service strain within NHS assessment pathways.
 
-1. In VS Code, select **File** > **Open Folder** again.
+Specific objectives include:
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
+- Determining whether ADHD referral demand has increased significantly over time.
+- Identifying differences in referral patterns across age groups.
+- Evaluating long-wait referral proportions as an indicator of service strain.
+- Developing a forecasting model to estimate future referral demand.
+- Communicating insights through an interactive Streamlit dashboard.
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
 
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
+## Project Workflow
 
-1. Choose **Venv** from the dropdown list.
+The project follows a structured analytics pipeline:
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+1. **Data Collection**
+   - NHS ADHD referral statistics were obtained from NHS England MHSDS reports.
 
-1. **DO NOT** click the box next to `requirements.txt`, as you need to do more steps before you can install your dependencies. Click **OK**.
+2. **Data Preparation**
+   - Raw datasets were cleaned and structured into time-series datasets.
 
-1. You will see a `.venv` folder appear in the file explorer pane to show that the virtual environment has been created.
+3. **Statistical Analysis**
+   - Regression and ANOVA tests were used to evaluate referral trends and demographic differences.
 
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
+4. **Forecast Modelling**
+   - A linear regression model was used to forecast future referral demand.
 
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
+5. **Dashboard Development**
+   - Results were communicated through an interactive Streamlit dashboard.
 
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
 
- ```console
- pip3 install -r requirements.txt
- ```
+## Dataset
 
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
+The dataset used in this project is derived from **NHS England Mental Health Services Monthly Statistics (MHSDS)**.
 
-1. Click the **kernel** button and choose **Python Environments**.
+It contains national-level indicators relating to ADHD referrals and waiting times across England.
 
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
+Key variables analysed include:
 
-```console
-! python --version
-```
+- Total open ADHD referrals
+- Age-group referral counts
+- Referrals waiting longer than 52 weeks
+- Monthly reporting periods
 
-## Deployment Reminders
+Raw data is stored in: data/raw/MHSDS_historic.csv
 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version that closest matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
+Processed datasets used for modelling and dashboard visualisation are stored in: data/processed/
 
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+
+## Business Requirements
+
+This project addresses the following analytical questions:
+
+1. Has ADHD referral demand increased significantly over time in England between 2019 and 2024?
+2. Do mean referral counts differ significantly across age groups?
+3. Has the proportion of referrals waiting longer than 52 weeks increased over time?
+4. Can future ADHD referral demand be predicted with acceptable accuracy using supervised machine learning?
+
+
+## Hypothesis Validation
+
+Three statistical hypotheses were tested.
+
+### H1 – Growth Trend in ADHD Referrals
+
+**Null hypothesis (H₀)**  
+There is no statistically significant relationship between reporting month and open ADHD referral counts.
+
+**Alternative hypothesis (H₁)**  
+There is a statistically significant positive relationship between reporting month and open ADHD referral counts.
+
+Test used: Linear regression
+
+Result: **Reject H₀ (p < 0.001)**
+
+
+### H2 – Age Group Differences
+
+**Null hypothesis (H₀)**  
+There is no statistically significant difference in mean open ADHD referral counts across age groups.
+
+**Alternative hypothesis (H₁)**  
+There is a statistically significant difference in mean open ADHD referral counts across age groups.
+
+Test used: One-way ANOVA
+
+Result: **Reject H₀ (p < 0.05)**
+
+
+### H3 – Long Wait Service Strain
+
+**Null hypothesis (H₀)**  
+There is no statistically significant relationship between reporting month and the proportion of ADHD referrals waiting more than 52 weeks.
+
+**Alternative hypothesis (H₁)**  
+There is a statistically significant relationship between reporting month and the long-wait referral proportion.
+
+Test used: Linear regression
+
+Result: **Fail to reject H₀ (p = 0.561)**
+
+
+## Tools & Technologies
+
+The following analytical techniques were applied:
+
+- Data cleaning and preprocessing
+- Time-series structuring
+- Descriptive statistical analysis
+- Linear regression trend testing
+- One-way ANOVA hypothesis testing
+- Forecast modelling using linear regression
+- Model evaluation using MAE, RMSE and MAPE
+
+Python libraries used include:
+
+- pandas
+- numpy
+- scipy
+- statsmodels
+- matplotlib
+- plotly
+- streamlit
+
+Development environment: VS Code
+Version control: Git & GitHub
+
+
+## Use of Generative Artificial Intelligence (GenAI) in this project
+
+GenAI (Microsoft Copilot) was used to support the workflow:
+
+- Code support: assisting with debugging. 
+- Data storytelling and communication: refining text such as the project title, motivation, and objectives. Helping to write interpretations of each chart for a non-technical audience. 
+
+## How to Run the Project
+
+1. Clone the repository: git clone <repo-url>
+
+2. Navigate to the project folder.
+
+3. Install dependencies: pip install -r requirements.txt
+
+4. Run the Streamlit dashboard: streamlit run app.py
+
+The analysis notebook can be found in: jupyter_notebooks/adhd_demand_analysis_and_forecasting.ipynb
+
+
+## Dashboard
+
+An interactive dashboard was developed using **Streamlit** to present the analytical findings.
+
+The dashboard includes four analytical views:
+
+1. **Overview**
+   - National referral demand trends
+   - Key performance indicators
+
+2. **Age Analysis**
+   - Referral comparisons across age groups
+   - Statistical insight from ANOVA testing
+
+3. **Service Strain**
+   - Long-wait referral trends (>52 weeks)
+
+4. **Forecast**
+   - Predicted vs actual referrals
+   - Model accuracy metrics
+
+To run the dashboard locally: streamlit run app.py
+
+
+Example dashboard views:
+
+![Overview](images/dashboard_overview.png)
+
+![Age Analysis](images/dashboard_age_analysis.png)
+
+![Service Strain](images/dashboard_service_strain.png)
+
+![Forecast](images/dashboard_forecast.png)
+
+
+## Ethical Considerations
+
+The project uses publicly available aggregated NHS statistics.  
+No personally identifiable data is included.
+
+Analysis was conducted responsibly and results are interpreted cautiously to avoid overgeneralisation.
+
+
+## Limitations
+
+Several limitations should be considered when interpreting the results:
+
+- The dataset contains aggregated national-level statistics, preventing regional analysis.
+- Referral data reflects service activity rather than underlying ADHD prevalence.
+- The forecasting model assumes continuation of historical trends.
+- External factors such as policy changes or service capacity expansions may influence future referral demand.
+
+
+## Future Improvements
+
+Potential improvements include:
+
+- Incorporating regional-level referral data
+- Testing more advanced forecasting models
+- Automating data updates for the dashboard
+- Extending the dashboard with additional service indicators
+
+
+## Project Structure
+
+adhd-demand-forecast-england/
+│
+├── data
+│ ├── raw
+│ │ └── MHSDS_historic.csv
+│ └── processed
+│ ├── referrals_timeseries.csv
+│ ├── age_group_referrals.csv
+│ ├── service_strain.csv
+│ └── forecast_results.csv
+│
+├── images
+│ ├── dashboard_overview.png
+│ ├── dashboard_age_analysis.png
+│ ├── dashboard_service_strain.png
+│ ├── dashboard_forecast.png
+│ └── dashboard_wireframe.drawio.png
+│
+├── jupyter_notebooks
+│ └── adhd_demand_analysis_and_forecasting.ipynb
+│
+├── app.py
+├── requirements.txt
+└── README.md
+
+
+## Key Project Outputs
+
+The main outputs of the project include:
+
+- **Analysis notebook**  
+  `jupyter_notebooks/adhd_demand_analysis_and_forecasting.ipynb`
+
+- **Processed datasets used for modelling**  
+  `data/processed/`
+
+- **Interactive Streamlit dashboard**  
+  `app.py`
+
+- **Dashboard screenshots used in documentation**  
+  `images/`
+
+
+## Author
+
+Shazia  
+
+Data Analytics Capstone Project 2 - March 2026 
+
+
+## References
+
+NHS Digital (2025) *Mental Health Services Monthly Statistics – ADHD Waiting Times and Referrals.*
+
+NICE (2018) *Attention Deficit Hyperactivity Disorder: Diagnosis and Management.*
+
+NHS England (2024) *Independent ADHD Taskforce Report.*
+
+UK Parliament Commons Library (2025) *ADHD in the UK: Prevalence and Services.*
+
