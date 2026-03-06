@@ -5,6 +5,29 @@
 
 ![Dashboard Overview](images/dashboard_overview.png)
 
+This project applies statistical analysis and forecasting techniques to NHS ADHD referral data to identify demand trends and visualise service pressures through an interactive Streamlit dashboard.
+
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Project Workflow](#project-workflow)
+- [Dataset](#dataset)
+- [Business Requirements](#business-requirements)
+- [Hypothesis Validation](#hypothesis-validation)
+- [Tools & Technologies](#tools--technologies)
+- [Use of Generative Artificial Intelligence](#use-of-generative-artificial-intelligence-genai-in-this-project)
+- [How to Run the Project](#how-to-run-the-project)
+- [Dashboard](#dashboard)
+- [Ethical Considerations](#ethical-considerations)
+- [Limitations](#limitations)
+- [Future Improvements](#future-improvements)
+- [Project Structure](#project-structure)
+- [Key Project Outputs](#key-project-outputs)
+- [Author](#author)
+- [References](#references)
+
 
 ## Project Overview
 
@@ -98,7 +121,7 @@ Result: **Reject H₀ (p < 0.001)**
 **Null hypothesis (H₀)**  
 There is no statistically significant difference in mean open ADHD referral counts across age groups.
 
-**Alternative hypothesis (H₂)**  
+**Alternative hypothesis (H₁)**  
 There is a statistically significant difference in mean open ADHD referral counts across age groups.
 
 Test used: One-way ANOVA
@@ -111,7 +134,7 @@ Result: **Reject H₀ (p < 0.05)**
 **Null hypothesis (H₀)**  
 There is no statistically significant relationship between reporting month and the proportion of ADHD referrals waiting more than 52 weeks.
 
-**Alternative hypothesis (H₃)**  
+**Alternative hypothesis (H₁)**  
 There is a statistically significant relationship between reporting month and the long-wait referral proportion.
 
 Test used: Linear regression
@@ -121,7 +144,7 @@ Result: **Fail to reject H₀ (p = 0.561)**
 
 ## Tools & Technologies
 
-The following analytical techniques were applied:
+The project was implemented using the following tools and technologies:
 
 - Data cleaning and preprocessing
 - Time-series structuring
@@ -145,22 +168,29 @@ Development environment: VS Code
 Version control: Git & GitHub
 
 
-## Use of Generative Artificial Intelligence (GenAI) in this project
+## Use of Generative Artificial Intelligence (GenAI) 
 
 GenAI (Microsoft Copilot) was used to support the workflow:
 
 - Code support: assisting with debugging. 
 - Data storytelling and communication: refining text such as the project title, motivation, and objectives. Helping to write interpretations of each chart for a non-technical audience. 
 
+
 ## How to Run the Project
 
-1. Clone the repository: git clone <repo-url>
+1. Clone the repository: 
+
+git clone <repo-url>
 
 2. Navigate to the project folder.
 
-3. Install dependencies: pip install -r requirements.txt
+3. Install dependencies:
 
-4. Run the Streamlit dashboard: streamlit run app.py
+ pip install -r requirements.txt
+
+4. Run the Streamlit dashboard:
+
+ streamlit run app.py
 
 The analysis notebook can be found in: jupyter_notebooks/adhd_demand_analysis_and_forecasting.ipynb
 
@@ -186,7 +216,9 @@ The dashboard includes four analytical views:
    - Predicted vs actual referrals
    - Model accuracy metrics
 
-To run the dashboard locally: streamlit run app.py
+To run the dashboard locally: 
+
+streamlit run app.py
 
 
 Example dashboard views:
