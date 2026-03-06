@@ -54,6 +54,8 @@ Specific objectives include:
 
 ## Project Workflow
 
+The project follows a structured analytics pipeline in which raw NHS data is cleaned and transformed into structured analytical datasets, used for statistical analysis and forecasting, and then communicated through an interactive Streamlit dashboard.
+
 The project follows a structured analytics pipeline:
 
 1. **Data Collection**
