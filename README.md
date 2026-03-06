@@ -105,41 +105,41 @@ Three statistical hypotheses were tested.
 
 ### H1 – Growth Trend in ADHD Referrals
 
-**Null hypothesis (H₀)**  
+**Null hypothesis (H0)**  
 There is no statistically significant relationship between reporting month and open ADHD referral counts.
 
-**Alternative hypothesis (H₁)**  
+**Alternative hypothesis (H1)**  
 There is a statistically significant positive relationship between reporting month and open ADHD referral counts.
 
 Test used: Linear regression
 
-Result: **Reject H₀ (p < 0.001)**
+Result: **Reject H0 (p < 0.001)**
 
 
 ### H2 – Age Group Differences
 
-**Null hypothesis (H₀)**  
+**Null hypothesis (H0)**  
 There is no statistically significant difference in mean open ADHD referral counts across age groups.
 
-**Alternative hypothesis (H₂)**  
+**Alternative hypothesis (H2)**  
 There is a statistically significant difference in mean open ADHD referral counts across age groups.
 
 Test used: One-way ANOVA
 
-Result: **Reject H₀ (p < 0.05)**
+Result: **Reject H0 (p < 0.05)**
 
 
 ### H3 – Long Wait Service Strain
 
-**Null hypothesis (H₀)**  
+**Null hypothesis (H0)**  
 There is no statistically significant relationship between reporting month and the proportion of ADHD referrals waiting more than 52 weeks.
 
-**Alternative hypothesis (H₃)**  
+**Alternative hypothesis (H3)**  
 There is a statistically significant relationship between reporting month and the long-wait referral proportion.
 
 Test used: Linear regression
 
-Result: **Reject H₀ (p < 0.001)**
+Result: **Reject H0 (p < 0.001)**
 
 
 ## Tools & Technologies
