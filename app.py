@@ -1,4 +1,4 @@
-# =========================================================
+
 # ADHD Assessment Demand & Service Strain Dashboard (Streamlit)
 # England, 2019–2024
 #
@@ -6,15 +6,15 @@
 # - Communicate key findings from the capstone analysis notebook
 # - Provide stakeholder-friendly visuals and interpretations
 # - Support healthcare planning by summarising demand + service strain
-# =========================================================
+
 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# ---------------------------------------------------------
+
 # STREAMLIT APP CONFIGURATION
-# ---------------------------------------------------------
+
 
 # Configure the Streamlit page (title shown in browser tab + wide layout)
 st.set_page_config(
