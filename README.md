@@ -23,6 +23,7 @@ This project applies statistical analysis and forecasting techniques to NHS ADHD
 - [Ethical Considerations](#ethical-considerations)
 - [Limitations](#limitations)
 - [Future Improvements](#future-improvements)
+- [Learning Journey](#learning-journey)
 - [Project Structure](#project-structure)
 - [Key Project Outputs](#key-project-outputs)
 - [Author](#author)
@@ -258,6 +259,19 @@ Potential improvements include:
 - Testing more advanced forecasting models
 - Automating data updates for the dashboard
 - Extending the dashboard with additional service indicators
+
+
+## Learning Journey
+
+This project provided an opportunity to apply the full data analytics workflow to a real-world healthcare dataset, from raw data preparation through statistical analysis, modelling, and dashboard development. One of the initial challenges involved working with NHS management information data that contained suppressed values and multiple indicator codes. Understanding the structure of the dataset and identifying the correct indicators required careful exploration and validation before the analytical workflow could be established.
+
+Another challenge involved structuring the dataset for time-series analysis and ensuring that the statistical models used were appropriate for the research questions. Creating structured monthly datasets, engineering time-index variables, and preparing data for regression modelling required careful data preparation and verification to ensure the analysis was methodologically sound.
+
+During the analysis process, an important learning moment occurred when revisiting the regression results for the service strain indicator (the proportion of referrals waiting longer than 52 weeks). Initially, the results were interpreted as not statistically significant, but further validation of the modelling outputs revealed that the regression actually indicated a statistically significant positive trend. Identifying and correcting this interpretation required careful review of the regression output and highlighted the importance of validating statistical results before drawing conclusions. This experience reinforced the value of critically reviewing analytical outputs and ensuring consistency between statistical results, written interpretations, and visualisations.
+
+The development of the Streamlit dashboard also introduced new technical considerations, particularly around structuring the application, optimising performance using cached data loading, and presenting statistical results in a way that remains accessible to non-technical stakeholders. Designing visualisations that clearly communicated the analytical findings while maintaining usability required iterative adjustments to the dashboard layout and content.
+
+Overall, the project strengthened practical skills in data cleaning, statistical analysis, hypothesis testing, model evaluation, and data communication. Building an end-to-end analytics pipeline—from raw dataset to interactive dashboard—provided valuable experience in translating complex data into clear, actionable insights. These experiences help prepare for future work in data analytics, where both technical rigour and effective communication are essential.
 
 
 ## Project Structure
