@@ -98,7 +98,7 @@ Result: **Reject H₀ (p < 0.001)**
 **Null hypothesis (H₀)**  
 There is no statistically significant difference in mean open ADHD referral counts across age groups.
 
-**Alternative hypothesis (H₁)**  
+**Alternative hypothesis (H₂)**  
 There is a statistically significant difference in mean open ADHD referral counts across age groups.
 
 Test used: One-way ANOVA
@@ -111,7 +111,7 @@ Result: **Reject H₀ (p < 0.05)**
 **Null hypothesis (H₀)**  
 There is no statistically significant relationship between reporting month and the proportion of ADHD referrals waiting more than 52 weeks.
 
-**Alternative hypothesis (H₁)**  
+**Alternative hypothesis (H₃)**  
 There is a statistically significant relationship between reporting month and the long-wait referral proportion.
 
 Test used: Linear regression
