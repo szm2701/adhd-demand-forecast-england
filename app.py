@@ -58,7 +58,6 @@ def apply_chart_layout(fig, title: str = None):
 
 
 
-
 # DASHBOARD HEADER SECTION
 
 
@@ -91,7 +90,6 @@ st.caption(
 # Displaying the data source improves transparency and aligns with good data communication practice.
 # Data source label (badge-like fallback for older Streamlit versions)
 st.caption("📊 Data source: NHS England MHSDS")
-
 
 
 # DATA LOADING (CACHED FOR PERFORMANCE)
@@ -146,7 +144,6 @@ def load_data():
 
 # Load datasets once (from cached function)
 ref_ts, age_ts, strain_ts, forecast_results = load_data()
-
 
 
 # HELPER FUNCTIONS
@@ -429,19 +426,19 @@ elif page == "Service Strain":
             markers=True,
             labels={"Month": "Month", "% waiting >52 weeks": "% waiting >52 weeks"},
         )
-        fig = apply_chart_layout(fig, title="Long-wait share over time (>52 weeks)")
-        st.plotly_chart(fig, use_container_width=True)
+    fig = apply_chart_layout(fig, title="Long-wait share over time (>52 weeks)")
+    st.plotly_chart(fig, use_container_width=True)
 
-        # Plain English interpretation tied to your hypothesis result (H3)
-        st.markdown("### Interpretation")
-        st.markdown(
-            "- This metric indicates **long-wait pressure** (waiting over one year).\n"
-            "- The regression test for trend was **not statistically significant** (p = 0.561), suggesting no clear linear increase in the long-wait share across the period.\n"
-            "- Even without a significant trend, **high absolute levels** can still indicate operational risk and patient impact."
-        )
+    # Plain English interpretation tied to your hypothesis result (H3)
+    st.markdown("### Interpretation")
+    st.markdown(
+        "- This metric indicates **long-wait pressure** (waiting over one year).\n"
+        "- Regression analysis identified a **statistically significant increase** in the proportion of referrals waiting longer than 52 weeks (p < 0.001).\n"
+        "- This suggests that rising referral demand may be contributing to increasing pressure within ADHD diagnostic pathways."
+    )
 
-        with st.expander("Show data table (technical)"):
-            st.dataframe(strain_plot, use_container_width=True)
+    with st.expander("Show data table (technical)"):
+        st.dataframe(strain_plot, use_container_width=True)
 
 
 
