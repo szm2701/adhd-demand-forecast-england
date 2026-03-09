@@ -11,7 +11,11 @@ kaggle.json
 .venv/
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+
+# Allow processed dashboard datasets to be tracked
+!data/processed/*.csv
+
+outputs/*
+!outputs/.gitkeep
 outputs/*
 !outputs/.gitkeep
